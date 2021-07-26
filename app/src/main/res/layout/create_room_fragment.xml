@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_primary"
+    tools:context="Activities.CreateProfile"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l1"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backtorooms"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+        </ImageView>
+        <TextView
+            android:id="@+id/createProfileToolBar"
+            android:layout_alignParentTop="true"
+            android:minHeight="60dp"
+            android:text="Select Contacts"
+            android:gravity="fill_vertical|center_horizontal"
+            android:textSize="15dp"
+            android:layout_weight="0.7"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/l1"
+        android:background="@drawable/rounded_background">
+        <EditText
+            android:id="@+id/search_contact"
+            android:layout_marginTop="10dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Search Contact"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:background="@drawable/rounded_textview_green"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"
+            android:scrollHorizontally="true"
+            android:textColor="@color/color_primary"
+            />
+
+        <EditText
+            android:id="@+id/roomname"
+            android:layout_marginTop="20dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Room Name"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/ic_baseline_group_add_24"
+            android:background="@drawable/roundedtextview_white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"
+            android:scrollHorizontally="true"
+            android:textColor="@color/color_primary"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Add Participants"
+            android:layout_gravity="start"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textCursorDrawable="@null"
+            android:scrollHorizontally="true"
+            android:textColor="@color/color_primary"
+            />
+        <ProgressBar
+            android:id="@+id/progressBarCreateRoom"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rvcontacts">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/createroombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="end|bottom"
+        app:srcCompat="@drawable/ic_baseline_done_24"
+        android:background="#07B594"
+        android:layout_marginRight="30dp">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>

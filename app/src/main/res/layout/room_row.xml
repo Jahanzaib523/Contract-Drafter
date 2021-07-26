@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:id="@+id/row"
+android:background="@drawable/rounded_textview_green">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room#"
+        android:id="@+id/nameof_room"
+        android:padding="5dp"
+        android:textSize="10dp"
+        android:textColor="@color/color_primary">
+    </TextView>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ongoing from "
+            android:layout_gravity="center"
+            android:id="@+id/startdateof_room"
+            android:textSize="10dp"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:textColor="@color/color_primary">
+        </TextView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/joinroomcall"
+            android:layout_weight="0"
+            android:layout_gravity="end|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_video_call_24">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusof_room"
+        android:text="Active"
+        android:textSize="10dp"
+        android:padding="5dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/color_primary">
+    </TextView>
+</LinearLayout>
+</LinearLayout>

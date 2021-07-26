@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary"
+    tools:context="Activities.CreateProfile"
+    android:fillViewport="true"
+    >
+
+    <TextView
+        android:id="@+id/createProfileToolBar"
+        android:layout_alignParentTop="true"
+        android:minHeight="60dp"
+        android:text="Create User Profile"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBarCreateProfile"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"
+        android:theme="@style/ProgressBarTheme"/>
+    <ScrollView
+        android:layout_below="@id/createProfileToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CreateProfile"
+        android:fillViewport="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circularImageCreateProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/avatar"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="5dp"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/cameracircularicon"
+                app:civ_circle_background_color="@color/white"
+                android:src="@drawable/camera"
+                android:layout_below="@id/circularImageCreateProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-25dp"
+                android:elevation="5dp"
+                />
+            <LinearLayout
+                android:layout_below="@id/circularImageCreateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/rounded_background"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginBottom="4dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/firstNameFieldCreateProfile"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:hint="@string/firstName"
+                        android:background="@drawable/roundedtextview_white"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        />
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="40dp"/>
+                    <EditText
+                        android:id="@+id/lastNameFieldCreateProfile"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:hint="@string/lastName"
+                        android:background="@drawable/roundedtextview_white"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:inputType="text"
+                        />
+
+                </LinearLayout>
+
+                <!--USER EMAIL-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emailHint"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/EmailIDUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Email ID"
+                    android:background="@drawable/roundedtextview_white"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+
+                <!--USER TYPE-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/usertype"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/UserType"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Agent, client etc"
+                    android:background="@drawable/roundedtextview_white"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    />
+
+                <!--GENDER RADIO BUTTONS-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <RadioGroup
+                    android:id="@+id/genderGroupCreateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/genderMaleCreateProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/male"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/color_primary"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_selector"
+                        android:checked="true"
+
+                        />
+                    <RadioButton
+                        android:id="@+id/genderFemaleCreateProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/female"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/color_primary"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_selector"
+                        />
+                    <RadioButton
+                        android:id="@+id/genderOtherCreateProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/preferNot"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/color_primary"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:button="@android:color/transparent"
+                        android:background="@drawable/radio_selector"
+                        />
+
+
+                </RadioGroup>
+
+
+
+                <!--PHONE NUMBER-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phoneNumber"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/phoneNoFieldCreateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="03473300523"
+                    android:background="@drawable/roundedtextview_white"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:inputType="phone"
+                    />
+
+
+                <!--BIO-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bio"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/color_primary"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <EditText
+                    android:id="@+id/bioFieldCreateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="@string/bioHint"
+                    android:background="@drawable/roundedtextview_white"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:inputType="textMultiLine"
+                    android:gravity="start"
+                    android:layout_marginBottom="20dp"
+                    />
+                <Button
+                    android:id="@+id/saveButtonCreateProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_rounded_rectangle_green_no_stroke"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

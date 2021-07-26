@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rowSearchItself"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/participantimage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/jahan"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/participant_onlinestatus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@color/color_primary"
+            android:layout_below="@id/participantimage"
+            android:layout_alignRight="@+id/participantimage"
+            android:layout_alignEnd="@+id/participantimage"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:visibility="visible"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/white" />
+
+        <TextView
+            android:id="@+id/participantname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jahanzaib Manzoor"
+            android:layout_toRightOf="@+id/participantimage"
+            android:layout_toEndOf="@+id/participantimage"
+            android:ellipsize="end"
+            android:padding="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status">
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

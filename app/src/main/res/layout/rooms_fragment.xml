@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_primary"
+    tools:context="Activities.CreateProfile"
+    android:fillViewport="true"
+    >
+
+    <TextView
+        android:id="@+id/createProfileToolBar"
+        android:layout_alignParentTop="true"
+        android:minHeight="60dp"
+        android:text="Rooms Present"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/createProfileToolBar"
+        android:background="@drawable/rounded_background">
+        <EditText
+            android:id="@+id/search_room"
+            android:layout_marginTop="10dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Search Room"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:background="@drawable/rounded_textview_green"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textCursorDrawable="@null"
+            android:scrollHorizontally="true"
+            android:textColor="@color/color_primary"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBarRoom"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="17dp"
+            android:id="@+id/rvrooms">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/newroom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="end|bottom"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:background="#07B594"
+        android:layout_marginRight="30dp">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+</RelativeLayout>

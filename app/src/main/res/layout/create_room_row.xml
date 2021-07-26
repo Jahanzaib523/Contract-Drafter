@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rowSearchItself"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:paddingTop="20dp"
+        android:paddingLeft="30dp"
+        android:layout_gravity="end">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:id="@+id/selectcontact"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_toLeftOf="@+id/contactimage"
+            android:layout_toEndOf="@+id/contactimage"
+            android:textColor="@color/color_primary">
+        </CheckBox>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contactimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/jahan"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/onlinestatus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@color/color_primary"
+            android:layout_below="@id/contactimage"
+            android:layout_alignRight="@+id/contactimage"
+            android:layout_alignEnd="@+id/contactimage"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:visibility="visible"
+            app:civ_border_width="3dp"
+            app:civ_border_color="@color/white" />
+
+        <TextView
+            android:id="@+id/contactname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jahanzaib Manzoor"
+            android:layout_toRightOf="@+id/contactimage"
+            android:layout_toEndOf="@+id/contactimage"
+            android:ellipsize="end"
+            android:padding="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/status"
+            android:visibility="gone">
+        </TextView>
+    </RelativeLayout>
+</LinearLayout>

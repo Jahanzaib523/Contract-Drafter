@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">ContractDraft</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+    <string name="password">Password</string>
+    <string name="createpassword">Create password</string>
+    <string name="confirmpassword">Confirm password</string>
+    <string name="usernameEmailHint">Username or email</string>
+    <string name="emailHint">Email address</string>
+    <string name="dontHaveAccount">Don\'t have an account?</string>
+    <string name="registerHere">Register here</string>
+    <string name="alreadyHaveAccount">Already have an account?</string>
+    <string name="signinHere">Sign in here</string>
+    <string name="rooms">Rooms</string>
+    <string name="terms">By tapping "Register", I agree to the privacy policy and the terms &amp; conditions</string>
+    <string name="profile">Profile</string>
+
+    <!--Create Profile Strings-->
+
+    <string name="createProfile">Create profile</string>
+    <string name="name">Name</string>
+    <string name="firstName">First name</string>
+    <string name="lastName">Last name</string>
+
+    <string name="dateOfBirth">Date of birth</string>
+    <string name="dateFormat">DD/MM/YY</string>
+
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="preferNot">Prefer not to say</string>
+
+    <string name="phoneNumber">Phone number</string>
+    <string name="phoneHint">+923473300523</string>
+
+    <string name="bio">Bio</string>
+    <string name="bioHint">Tell us about yourself</string>
+    <string name="usertype">User type</string>
+</resources>

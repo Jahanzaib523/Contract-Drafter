@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750479631976",
+    "firebase_url": "https://contractdrafter-c1497-default-rtdb.firebaseio.com",
+    "project_id": "contractdrafter-c1497",
+    "storage_bucket": "contractdrafter-c1497.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750479631976:android:6dac63be6bb688adc1fddd",
+        "android_client_info": {
+          "package_name": "com.myapp.contractdrafter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750479631976-7m935u9q5ucjc0cfkqptjuq8opdfolj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRc1hXtVJqNK-43vfjaz4TfSRogpUS-Z8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750479631976-7m935u9q5ucjc0cfkqptjuq8opdfolj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
